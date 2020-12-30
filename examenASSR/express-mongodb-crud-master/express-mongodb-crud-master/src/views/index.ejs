@@ -1,0 +1,93 @@
+<% include partials/_header %>
+
+<div class="container">
+
+  <div class="row">
+    <!--FORM-->
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-body">
+          <form action="/add" method="post">
+            <div class="form-group">
+              <input class="form-control" type="text" name="Name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="Year" cols="80"
+                placeholder="Year"
+                >
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="Grapes" cols="80"
+                placeholder="Grapes"
+                >
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="Country" cols="80"
+                placeholder="Country"
+                >
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="Region" cols="80"
+                placeholder="Region"
+                >
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="Description" cols="80"
+                placeholder="Add a Description"
+                ></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIST -->
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>N</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Grapes</th>
+            <th>Country</th>
+            <th>Region</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < tasks.length; i++) { %>
+            <tr>
+              <td><%= i + 1%></td>
+              <td><strong><%= tasks[i].Name %></strong></td>
+              <td><%= tasks[i].Year %></td>
+              <td><%= tasks[i].Grapes %></td>
+              <td><%= tasks[i].Country %></td>
+              <td><%= tasks[i].Region %></td>
+              <td><%= tasks[i].Description %></td>
+              <td><%= tasks[i].Picture %></td>
+              <td>
+                <a
+                  class="<%= tasks[i].status ? 'btn btn-success' : 'btn btn-dark'%>"
+                  href="/turn/<%= tasks[i]._id %>">Done</a>
+                <a href="/delete/<%= tasks[i]._id %>"
+                  class="btn btn-danger">
+                  Delete
+                </a>
+                <a href="/edit/<%= tasks[i]._id %>" class="btn btn-info">
+                  Edit
+                </a>
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+

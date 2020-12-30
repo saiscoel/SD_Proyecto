@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DiscoveryApplication<Discovery>",
+            "request": "launch",
+            "mainClass": "com.example.Discovery.DiscoveryApplication",
+            "projectName": "Discovery"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GatewayApplication<Gateway>",
+            "request": "launch",
+            "mainClass": "com.example.Gateway.GatewayApplication",
+            "projectName": "Gateway"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ProcessApplication<Process>",
+            "request": "launch",
+            "mainClass": "com.example.Process.ProcessApplication",
+            "projectName": "Process"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ProductApplication<Product>",
+            "request": "launch",
+            "mainClass": "com.example.Product.ProductApplication",
+            "projectName": "Product"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RegisterApplication<Register>",
+            "request": "launch",
+            "mainClass": "com.example.Register.RegisterApplication",
+            "projectName": "Register"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CustomerApplication<customer>",
+            "request": "launch",
+            "mainClass": "com.example.customer.CustomerApplication",
+            "projectName": "customer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SellerApplication<seller>",
+            "request": "launch",
+            "mainClass": "com.example.seller.SellerApplication",
+            "projectName": "seller"
+        }
+    ]
+}
